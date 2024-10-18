@@ -168,7 +168,7 @@ export class Animation {
 		}
 
 		if (this.currentTime > this.animationData.animation_length) {
-			if (this.animationData.loop) this.loop()
+			if (this.animationData.loop && this.animationData.loop !== "hold_on_last_frame") this.loop()
 			else this.pause()
 		}
 
