@@ -72,7 +72,7 @@ export class Animation {
 
 				if (time > this.currentTime) {
 					continue
-				} else if (time === this.currentTime) {
+				} else if (time === this.currentTime || i === timestamps.length - 1) {
 					if (Array.isArray(transform)) {
 						return transform.map((t) =>
 							typeof t === 'string' ? this.execute(t) : t
